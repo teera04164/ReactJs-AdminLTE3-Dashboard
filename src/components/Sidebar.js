@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
-
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 export default class Sidebar extends Component {
     render() {
         return (
@@ -48,10 +53,10 @@ export default class Sidebar extends Component {
                                             </a>
                                         </li>
                                         <li className="nav-item">
-                                            <a href="./index3.html" className="nav-link active">
+                                            <Link to='/' className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
-                                                <p>Dashboard v3</p>
-                                            </a>
+                                                <p>Sign out</p>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </li>
@@ -374,10 +379,11 @@ export default class Sidebar extends Component {
                                     </a>
                                     <ul className="nav nav-treeview">
                                         <li className="nav-item">
-                                            <a href="pages/examples/login.html" className="nav-link">
+                                            <Link to='/' className="nav-link">
                                                 <i className="far fa-circle nav-icon" />
                                                 <p>Login</p>
-                                            </a>
+                                            </Link>
+
                                         </li>
                                         <li className="nav-item">
                                             <a href="pages/examples/register.html" className="nav-link">
